@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block main %} 
+<form action="/admin" method="post" name="login" class="login-form">
+    <h2 class="texth2">Login to Admin account</h2>
+    <h3>{{message}}</h3>
+    <input type="text" name="login" placeholder="Your login"><br>
+    <input type="password" name="password" placeholder="Your password"><br>
+    <button type="submit">LOG IN</button>
+</form>
+{% endblock %}

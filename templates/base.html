@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">MAIN</a></li>
+                <li><a href="/Articl">INTERESTING PLACES</a></li>
+                <li><a href="/login">LOGIN</a></li>
+            </ul>
+        </nav>
+       {% block welcome %} {% endblock %}
+    </header>
+    
+   
+    <main> {% block main %} {% endblock %}</main>
+        
+    <footer>
+        <p>
+            Copyright � 1999-2020 Ctrip.com (Hong Kong) Limited. All rights reserved. <br>
+            Site Operator: Ctrip.com (Hong Kong) Limited <br>
+            Hong Kong Travel License No. 352367
+        </p>
+    </footer>
+        
+    
+</body>
+</html>

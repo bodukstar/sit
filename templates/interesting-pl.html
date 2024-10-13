@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} INTERESTING PLACES {% endblock %}
+
+{% block main %}
+<h1 style="text-align: center; padding-top: 50px">{{ title }}</h1>
+<div class="interesting-places">
+    {% for place in places %}
+    <div class="place">
+        <a href="/details/{{ place['title'] }}">
+            <img src="{{ place['picture'] }}" height="200" />
+        </a>
+        <a hre
+        f="/details/{{ place['title'] }}" class="link">
+            <h3>{{ place['title'] }}</h3>
+        </a>
+        <p>{{ place['description'] }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

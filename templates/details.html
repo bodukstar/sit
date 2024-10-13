@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+    {% if article %}
+        <section class="full_post">
+            <h2>{{ article.title }}</h2>
+            <div class="full_post_img"><img src="{{ article.img }}"></div>
+
+            <div class="full_post_details">
+                <p class="post_continent">{{ article.continent }}</p>
+                <p class="full_post_text">{{ article.text }}</p>
+                <p class="post_continent">{{ article.created_on }}</p>
+            </div>
+        </section> 
+    {% else %}
+        <h2 class="article_not">Такої статті не існує  	&#128531;</h2>
+    {% endif %}
+{% endblock %}

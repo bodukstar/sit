@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Discover {% endblock %}
+
+{% block main %}
+    <section class="articles">
+        <h1>Discover somethong new</h1>
+    </section>
+
+    <h2>Open new city</h2>
+    {% for article in articles %}
+      <div class="conttainer">
+        <div class="postImg"><img src="{{ article.img }}"/></div>
+
+        <div class="details">
+            <h3 class="post_title">{{ article.title }}</h3>
+            <p class="post_continent">{{ article.continent }}</p>
+            <p  class="post_text">{{ article.text }}</p>
+
+            <div class="more_details">
+                <a href="/details/{{ article.id }} ">More details</a>
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}
